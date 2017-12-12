@@ -1,4 +1,4 @@
-This is a layer to provide ROS Indigo Igloo in an OpenEmbedded Linux system.
+This is a layer to provide ROS Kinetic Kame in an OpenEmbedded Linux system.
 It provides a stable cross-compilation build system for many common ROS packages. 
 Currently, this layer is still under continuous development.
 
@@ -190,14 +190,14 @@ resolved in the past.
   to the /etc/hosts file, and set up the environment with
 
     export ROS_ROOT=/opt/ros
-    export ROS_DISTRO=indigo
-    export ROS_PACKAGE_PATH=/opt/ros/indigo/share
-    export PATH=$PATH:/opt/ros/indigo/bin
-    export LD_LIBRARY_PATH=/opt/ros/indigo/lib
-    export PYTHONPATH=/opt/ros/indigo/lib/python2.7/site-packages
+    export ROS_DISTRO=kinetic
+    export ROS_PACKAGE_PATH=/opt/ros/kinetic/share
+    export PATH=$PATH:/opt/ros/kinetic/bin
+    export LD_LIBRARY_PATH=/opt/ros/kinetic/lib
+    export PYTHONPATH=/opt/ros/kinetic/lib/python2.7/site-packages
     export ROS_MASTER_URI=http://localhost:11311
-    export CMAKE_PREFIX_PATH=/opt/ros/indigo
-    touch /opt/ros/indigo/.catkin
+    export CMAKE_PREFIX_PATH=/opt/ros/kinetic
+    touch /opt/ros/kinetic/.catkin
 
   Finally, you can start roscore with
 

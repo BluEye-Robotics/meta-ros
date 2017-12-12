@@ -1,31 +1,34 @@
-From f86d6ca6c56d90e983a8074d4a8d6ac22cdee8cf Mon Sep 17 00:00:00 2001
-From: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
-Date: Tue, 24 Jan 2017 17:27:28 +0200
-Subject: [PATCH 1/2] moveit_ros_perception: make OpenGL parts optional
+From ef0b62350a3da00ef7b56b6e096c02fb565a3b70 Mon Sep 17 00:00:00 2001
+From: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+Date: Wed, 29 Nov 2017 06:14:06 +0100
+Subject: [PATCH] moveit_ros_perception: make OpenGL parts optional
 
 But build everything by default.
 
-Upstream-Status: Inappropriate [WONTFIX for stable indigo-devel branch]
-
 Signed-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
----
- CMakeLists.txt | 35 ++++++++++++++++++++---------------
- 1 file changed, 20 insertions(+), 15 deletions(-)
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index e984b17..fd91cc6 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -1,6 +1,8 @@
- cmake_minimum_required(VERSION 2.8.3)
- project(moveit_ros_perception)
+[Ported Dmitry's patch from indigo to current kinetic branch]
+
+Upstream-Status: Submitted [https://github.com/ros-planning/moveit/pull/698]
+
+Signed-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+---
+ moveit_ros/perception/CMakeLists.txt | 36 +++++++++++++++++++++---------------
+ 1 file changed, 21 insertions(+), 15 deletions(-)
+
+diff --git a/moveit_ros/perception/CMakeLists.txt b/moveit_ros/perception/CMakeLists.txt
+index 95fbc58..064fb74 100644
+--- a/moveit_ros/perception/CMakeLists.txt
++++ b/moveit_ros/perception/CMakeLists.txt
+@@ -3,18 +3,25 @@ project(moveit_ros_perception)
+ 
+ add_compile_options(-std=c++11)
  
 +option(BUILD_OPENGL "Build the parts that depends on OpenGL" ON)
 +
  if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE Release)
  endif()
-@@ -9,12 +11,16 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
  
  find_package(Boost REQUIRED thread signals)
  
@@ -35,7 +38,7 @@ index e984b17..fd91cc6 100644
 -if (OPENGL_FOUND)
 -  set(gl_LIBS ${gl_LIBS} ${OPENGL_LIBRARIES})
 -endif(OPENGL_FOUND)
-+if (BUILD_OPENGL)
++if(BUILD_OPENGL)
 +  find_package(OpenGL REQUIRED)
 +  find_package(GLEW REQUIRED)
 +  find_package(GLUT REQUIRED)
@@ -45,10 +48,11 @@ index e984b17..fd91cc6 100644
 +  set(perception_GL_INCLUDE_DIRS "mesh_filter/include" "depth_image_octomap_updater/include")
 +  set(SYSTEM_GL_INCLUDE_DIRS ${GLEW_INCLUDE_DIR} ${GLUT_INCLUDE_DIR})
 +endif(BUILD_OPENGL)
- 
- find_package(catkin REQUIRED COMPONENTS
-   moveit_core
-@@ -39,13 +45,12 @@ find_package(OpenCV)
++
+ if(APPLE)
+   find_package(X11 REQUIRED)
+ endif(APPLE)
+@@ -47,13 +54,12 @@ find_package(OpenCV)
  
  catkin_package(
    INCLUDE_DIRS
@@ -63,9 +67,9 @@ index e984b17..fd91cc6 100644
      ${OCTOMAP_INCLUDE_DIRS}
    LIBRARIES
      moveit_lazy_free_space_updater
-@@ -59,21 +64,19 @@ catkin_package(
-     image_transport
-     moveit_msgs)
+@@ -70,21 +76,19 @@ catkin_package(
+     EIGEN3
+ )
  
 -include_directories(mesh_filter/include
 -                    lazy_free_space_updater/include
@@ -76,19 +80,19 @@ index e984b17..fd91cc6 100644
                      pointcloud_octomap_updater/include
                      semantic_world/include
 +                    ${perception_GL_INCLUDE_DIRS}
-                     ${OpenCV_INCLUDE_DIRS}
                      ${Boost_INCLUDE_DIRS}
                      ${catkin_INCLUDE_DIRS}
                      )
  include_directories(SYSTEM
-                     ${EIGEN_INCLUDE_DIRS}
+                     ${OpenCV_INCLUDE_DIRS}
+                     ${EIGEN3_INCLUDE_DIRS}
 -                    ${GLEW_INCLUDE_DIR}
 -                    ${GLUT_INCLUDE_DIR}
 +                    ${SYSTEM_GL_INCLUDE_DIR}
+                     ${X11_INCLUDE_DIR}
                      )
  
- link_directories(${Boost_LIBRARY_DIRS})
-@@ -83,8 +86,10 @@ add_subdirectory(lazy_free_space_updater)
+@@ -96,8 +100,10 @@ add_subdirectory(lazy_free_space_updater)
  add_subdirectory(point_containment_filter)
  add_subdirectory(occupancy_map_monitor)
  add_subdirectory(pointcloud_octomap_updater)

@@ -1,64 +1,73 @@
-From 60378bc5f3daf407e774b978506ee2557a6cc471 Mon Sep 17 00:00:00 2001
-From: Lukas Bulwahn <lukas.bulwahn@gmail.com>
-Date: Tue, 3 Oct 2017 11:28:46 +0200
-Subject: [PATCH] simple_messsage: Build unit tests conditionally
+From 2e5cfd78c8a13aa8cbc8d1d64e427e8c8e102d44 Mon Sep 17 00:00:00 2001
+From: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
+Date: Thu, 5 Jan 2017 11:46:57 +0200
+Subject: [PATCH] simple_message: build unit tests conditionally
 
+Signed-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
+
+Upstream-Status: Accepted [https://github.com/ros-industrial/industrial_core/commit/2e5cfd78c8a13aa8cbc8d1d64e427e8c8e102d44]
+
+This patch has been generated with:
+  `git format-patch -1 2e5cfd78c8a13aa8cbc8d1d64e427e8c8e102d44`
+in the industrial_core repository.
+
+Signed-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>
 ---
- simple_message/CMakeLists.txt | 30 ++++++++++++++++++------------
- 1 file changed, 18 insertions(+), 12 deletions(-)
+ simple_message/CMakeLists.txt | 32 ++++++++++++++++++--------------
+ 1 file changed, 18 insertions(+), 14 deletions(-)
 
 diff --git a/simple_message/CMakeLists.txt b/simple_message/CMakeLists.txt
-index 3ef1f0e..2fa60bc 100644
+index adf54ef..10bc18d 100644
 --- a/simple_message/CMakeLists.txt
 +++ b/simple_message/CMakeLists.txt
-@@ -101,9 +101,6 @@ add_library(simple_message ${SRC_FILES})
+@@ -101,33 +101,37 @@ add_library(simple_message ${SRC_FILES})
  target_link_libraries(simple_message ${catkin_LIBRARIES})
  add_dependencies(simple_message ${industrial_msgs_EXPORTED_TARGETS})
  
 -catkin_add_gtest(utest ${UTEST_SRC_FILES})
 -set_target_properties(utest PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=51000")
 -target_link_libraries(utest simple_message)
- 
+-
  # ALTERNATIVE LIBRARY (DIFFERENT ENDIAN)
  add_library(simple_message_bswap ${SRC_FILES})
-@@ -111,9 +108,6 @@ set_target_properties(simple_message_bswap PROPERTIES COMPILE_DEFINITIONS "BYTE_
+ set_target_properties(simple_message_bswap PROPERTIES COMPILE_DEFINITIONS "BYTE_SWAPPING")
  target_link_libraries(simple_message_bswap ${catkin_LIBRARIES})
  add_dependencies(simple_message_bswap ${industrial_msgs_EXPORTED_TARGETS})
  
 -catkin_add_gtest(utest_byte_swapping ${UTEST_SRC_FILES})
 -set_target_properties(utest_byte_swapping PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=52000")
 -target_link_libraries(utest_byte_swapping simple_message_bswap)
- 
+-
  # ALTERNATIVE LIBRARY (64-bit floats)
  add_library(simple_message_float64 ${SRC_FILES})
-@@ -121,13 +115,25 @@ set_target_properties(simple_message_float64 PROPERTIES COMPILE_DEFINITIONS "FLO
+ set_target_properties(simple_message_float64 PROPERTIES COMPILE_DEFINITIONS "FLOAT64")
  target_link_libraries(simple_message_float64 ${catkin_LIBRARIES})
  add_dependencies(simple_message_float64 ${industrial_msgs_EXPORTED_TARGETS})
  
 -catkin_add_gtest(utest_float64 ${UTEST_SRC_FILES})
 -set_target_properties(utest_float64 PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=53000;FLOAT64")
 -target_link_libraries(utest_float64 simple_message_float64)
-+if (CATKIN_ENABLE_TESTING)
++if(CATKIN_ENABLE_TESTING)
++
++    catkin_add_gtest(utest ${UTEST_SRC_FILES})
++    set_target_properties(utest PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=11000")
++    target_link_libraries(utest simple_message)
++
++    catkin_add_gtest(utest_byte_swapping ${UTEST_SRC_FILES})
++    set_target_properties(utest_byte_swapping PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=12000")
++    target_link_libraries(utest_byte_swapping simple_message_bswap)
++
++    catkin_add_gtest(utest_float64 ${UTEST_SRC_FILES})
++    set_target_properties(utest_float64 PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=13000;FLOAT64")
++    target_link_libraries(utest_float64 simple_message_float64)
++
++    catkin_add_gtest(utest_udp ${UTEST_SRC_FILES})
++    set_target_properties(utest_udp PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=15000;UDP_TEST")
++    target_link_libraries(utest_udp simple_message)
  
 -catkin_add_gtest(utest_udp ${UTEST_SRC_FILES})
 -set_target_properties(utest_udp PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=55000;UDP_TEST")
 -target_link_libraries(utest_udp simple_message)
-+    catkin_add_gtest(utest ${UTEST_SRC_FILES})
-+    set_target_properties(utest PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=51000")
-+    target_link_libraries(utest simple_message)
-+
-+    catkin_add_gtest(utest_byte_swapping ${UTEST_SRC_FILES})
-+    set_target_properties(utest_byte_swapping PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=52000")
-+    target_link_libraries(utest_byte_swapping simple_message_bswap)
-+
-+    catkin_add_gtest(utest_float64 ${UTEST_SRC_FILES})
-+    set_target_properties(utest_float64 PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=53000;FLOAT64")
-+    target_link_libraries(utest_float64 simple_message_float64)
-+
-+    catkin_add_gtest(utest_udp ${UTEST_SRC_FILES})
-+    set_target_properties(utest_udp PROPERTIES COMPILE_DEFINITIONS "TEST_PORT_BASE=55000;UDP_TEST")
-+    target_link_libraries(utest_udp simple_message)
-+
 +endif()
  
  install(

@@ -28,7 +28,7 @@ These changes are currently in the master branch as of 2017-Aug-24.
 
   ROS repositories generally do not use `master` as their default
   branch, so be sure to include the correct branch for the desired
-  distribution as part of the URI: `<URI>;branch=indigo-devel`
+  distribution as part of the URI: `<URI>;branch=kinetic-devel`
 
 ## EXAMPLES ##
 Build the Vector Nav package

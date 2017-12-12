@@ -3,6 +3,9 @@ From: Lukas Bulwahn <lukas.bulwahn@gmail.com>
 Date: Tue, 2 May 2017 08:27:14 +0200
 Subject: [PATCH] find Eigen3 with ROS cmake_modules script
 
+Upstream-Status: Inappropriate
+
+Signed-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>
 ---
  CMakeLists.txt | 16 +++-------------
  1 file changed, 3 insertions(+), 13 deletions(-)
