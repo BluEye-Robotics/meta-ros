@@ -7,8 +7,8 @@ DEPENDS = "cmake-modules boost urdf urdfdom-py console-bridge libtinyxml urdfdom
 
 SRC_URI = "https://github.com/ros-planning/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
 
-SRC_URI[md5sum] = "4cfb868d03ced518bd68ca7b19795580"
-SRC_URI[sha256sum] = "19d4b91b48c39a9c3a27cb22683d91d441d74d06eb2a054667572acd09774920"
+SRC_URI[md5sum] = "12960837d6f9afbf65af33d28cb3dd38"
+SRC_URI[sha256sum] = "98d585667906da2485dfad67af3ee5df4caab9a5cd9faf5e794c06357a87a9cf"
 
 S = "${WORKDIR}/${ROS_SP}"
 

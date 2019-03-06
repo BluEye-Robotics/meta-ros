@@ -3,6 +3,6 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "message-generation rospy rosservice"
+DEPENDS = "message-generation rospy rosservice ${PYTHON_PN}-catkin-pkg python3-catkin-pkg python-catkin-pkg"
 
 require rosbridge-suite.inc

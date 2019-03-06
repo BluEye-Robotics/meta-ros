@@ -7,8 +7,8 @@ DEPENDS = "dynamic-reconfigure libeigen nodelet nodelet-topic-tools message-filt
   pcl-msgs pluginlib rosbag roscpp sensor-msgs std-msgs tf tf2-eigen"
 
 SRC_URI = "https://github.com/ros-perception/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "c8046f14ca809015d4c2b2740af24b6b"
-SRC_URI[sha256sum] = "05042dde38bf67ab2c4691a529caa0fd48a1877b10992568a4dda4712ec67e24"
+SRC_URI[md5sum] = "51a7f1d79ddd3a595ced6dc98e51a8c6"
+SRC_URI[sha256sum] = "6afb1f2697c6a2f9ca815baabcf4e75c08c59a2955f130dffad35a33a9c27cd2"
 
 S = "${WORKDIR}/${ROS_SP}/${ROS_BPN}"
 

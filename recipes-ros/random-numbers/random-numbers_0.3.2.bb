@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 DEPENDS = "boost"
 
 SRC_URI = "https://github.com/ros-planning/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "95cc49dbbdcb977785c49da42e7e6473"
-SRC_URI[sha256sum] = "9377e6b05d5336b8293b9dc45bc8e7bcdee90becb0e0be31caa35c8d970807a8"
+SRC_URI[md5sum] = "0fd6c6503ef969307e91fa25fabd8b02"
+SRC_URI[sha256sum] = "da825a0c7a4e9de180d9d539aa78682c1d805b1e4c3ef16af0e6cb384f2134f5"
 
 S = "${WORKDIR}/${ROS_SP}"
 

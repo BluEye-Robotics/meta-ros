@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=14;endline=14;md5=5ee5b8b046ae4
 DEPENDS = "message-generation std-msgs trajectory-msgs geometry-msgs sensor-msgs actionlib-msgs octomap-msgs object-recognition-msgs"
 
 SRC_URI = "https://github.com/ros-planning/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "f570f2c0a0111fc7b5e234baa5bd3cb6"
-SRC_URI[sha256sum] = "49d5980e1ff4a4fb606eee079632de5360bbee71e8e8897076be5f619add7428"
+SRC_URI[md5sum] = "a01f76aaef126d80dd2636df1f39f55f"
+SRC_URI[sha256sum] = "68885eafd4e6fbf9fee33e4cfd85b75ecd7465a29fffc52b3b75a3c1931da6f4"
 
 S = "${WORKDIR}/${ROS_SP}"
 

@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=d566ef916e9de
 DEPENDS = "roslib rosconsole roscpp pluginlib"
 
 SRC_URI = "https://github.com/ros/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "93b0685f061351dd2169f6b7f5373ca6"
-SRC_URI[sha256sum] = "6632c8bc2f3c47db6f69d136ccf58a1963ac0c83f5f542173caaebd2c7086160"
+SRC_URI[md5sum] = "9db24104f8696cf89d5dd8c47cd390db"
+SRC_URI[sha256sum] = "647958f9eba1cb304fe0e7899c3ee884b3b748720a41afb1c509ac8badf610c2"
 
 inherit catkin

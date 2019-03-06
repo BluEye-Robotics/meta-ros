@@ -245,6 +245,8 @@ def update_package(package):
         print_err("Repo moved %s" % package)
     except DistroUrlException:
         print_err("Cannot retrieve source url for %s" % package)
+    except urllib.error.HTTPError as e:
+        print_err(str(e))
     else:
         print_debug("Renaming files for %s" % package)
         for [old_fn, new_fn] in rename_requests:
