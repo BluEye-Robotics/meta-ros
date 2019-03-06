@@ -4,9 +4,12 @@ LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://PKG-INFO;beginline=8;endline=8;md5=e910b35b0ef4e1f665b9a75d6afb7709"
 PYPI_PACKAGE = "catkin_pkg"
 
-SRC_URI[md5sum] = "da93566c65dddfa9f821e18944c5ee5e"
-SRC_URI[sha256sum] = "d4d069eaeb29d6a9ee71773b20c41515b6e0feb9ea2765ebaf3e599d0ceef050"
+SRC_URI[md5sum] = "0c8752ab98ab06481a2ea7d037ac3878"
+SRC_URI[sha256sum] = "22255fe79f3e3e64472e2abc3714fb46bd260b2cdfa4ffdc6e2b1b7bd59b64db"
 
 inherit pypi
 
-BBCLASSEXTEND = "native"
+DEPENDS += "${PYTHON_PN}-pyparsing"
+RDEPENDS_${PN} += "${PYTHON_PN}-pyparsing"
+
+BBCLASSEXTEND += "native"
