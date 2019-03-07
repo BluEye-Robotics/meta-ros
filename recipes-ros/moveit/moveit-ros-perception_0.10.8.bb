@@ -9,7 +9,7 @@ require moveit.inc
 
 ROS_BPN = "moveit_ros/perception"
 
-SRC_URI += "file://0001-moveit_ros_perception-make-OpenGL-parts-optional.patch;striplevel=3"
 SRC_URI += "file://0001-moveit_ros-perception-do-not-use-SYSTEM.patch;striplevel=3"
+SRC_URI += "file://remove_deprecated_and_unused_boost_signals.patch;patchdir=../.."
 
-EXTRA_OECMAKE_append = " -DBUILD_OPENGL=OFF"
+EXTRA_OECMAKE_append = " -DWITH_OPENGL=OFF"

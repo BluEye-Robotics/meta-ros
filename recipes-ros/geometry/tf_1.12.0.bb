@@ -7,6 +7,8 @@ DEPENDS = "angles geometry-msgs message-filters sensor-msgs tf2-ros"
 
 require geometry.inc
 
+SRC_URI += "file://remove_signals_from_find_package.patch;patchdir=.."
+
 RDEPENDS_${PN} = "${PYTHON_PN}-numpy"
 
 # This option disables python support in case of python3 flavour of ROS because

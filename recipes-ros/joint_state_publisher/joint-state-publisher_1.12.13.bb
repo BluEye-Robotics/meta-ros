@@ -6,6 +6,6 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc
 
 DEPENDS = "rospy wxpython sensor-msgs"
 
-require robot-model.inc
+require joint-state-publisher.inc
 
 RDEPENDS_${PN} = "wxpython"

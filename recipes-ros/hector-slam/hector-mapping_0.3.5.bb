@@ -8,3 +8,4 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=19;endline=19;md5=d566ef916e9de
 DEPENDS = "cmake-modules message-runtime boost nav-msgs visualization-msgs tf message-filters laser-geometry tf-conversions"
 
 require hector-slam.inc
+SRC_URI += "file://0001-Remove-boost-signals.patch;patchdir=.."

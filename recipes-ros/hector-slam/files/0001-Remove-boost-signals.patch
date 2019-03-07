@@ -1,0 +1,25 @@
+From c681081140a4148311b0b0dfc421fe97a464c304 Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Thu, 7 Mar 2019 14:15:50 +0100
+Subject: [PATCH] Remove boost signals
+
+---
+ hector_mapping/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/hector_mapping/CMakeLists.txt b/hector_mapping/CMakeLists.txt
+index 7b5a3c9..5f49b13 100644
+--- a/hector_mapping/CMakeLists.txt
++++ b/hector_mapping/CMakeLists.txt
+@@ -7,7 +7,7 @@ project(hector_mapping)
+ find_package(catkin REQUIRED COMPONENTS roscpp nav_msgs visualization_msgs tf message_filters laser_geometry tf_conversions message_generation)
+ 
+ ## System dependencies are found with CMake's conventions
+-find_package(Boost REQUIRED COMPONENTS thread signals)
++find_package(Boost REQUIRED COMPONENTS thread)
+ include_directories(${Boost_INCLUDE_DIRS})
+ 
+ # Find Eigen3 (from http://wiki.ros.org/jade/Migration)
+-- 
+2.17.2 (Apple Git-113)
+

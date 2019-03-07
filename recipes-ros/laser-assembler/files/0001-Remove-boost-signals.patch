@@ -1,0 +1,25 @@
+From 5b3151010a44349fc9f86dd4d14cba9914dc15cd Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Thu, 7 Mar 2019 15:16:56 +0100
+Subject: [PATCH] Remove boost signals
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ae36340..74f2f32 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,7 +11,7 @@ tf sensor_msgs message_filters roscpp laser_geometry filters)
+ find_package(catkin REQUIRED COMPONENTS 
+   ${THIS_PACKAGE_ROS_DEPS} 
+   message_generation)
+-find_package(Boost REQUIRED COMPONENTS system signals)
++find_package(Boost REQUIRED COMPONENTS system)
+ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
+ 
+ ##############################################################################
+-- 
+2.17.2 (Apple Git-113)
+

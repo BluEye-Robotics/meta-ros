@@ -1,7 +1,7 @@
 DESCRIPTION = "PCL (Point Cloud Library) ROS interface stack"
 SECTION = "devel"
 LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://package.xml;beginline=19;endline=19;md5=d566ef916e9dedc494f5f793a6690ba5"
+LIC_FILES_CHKSUM = "file://package.xml;beginline=20;endline=20;md5=d566ef916e9dedc494f5f793a6690ba5"
 
 DEPENDS = "dynamic-reconfigure libeigen nodelet nodelet-topic-tools message-filters tf rosbag pcl pcl-conversions \
   pcl-msgs pluginlib rosbag roscpp sensor-msgs std-msgs tf tf2-eigen"

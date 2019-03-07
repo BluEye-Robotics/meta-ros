@@ -7,4 +7,3 @@ require ros.inc
 
 ROS_PKG_SUBDIR = "tools"
 
-SRC_URI += "file://0001-rosclean-Use-du-sk-1024-on-Linux-for-getting-disk-us.patch;striplevel=3"

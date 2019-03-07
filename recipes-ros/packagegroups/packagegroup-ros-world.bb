@@ -82,7 +82,6 @@ RDEPENDS_${PN} = "\
     position-controllers \
     velocity-controllers \
     openslam-gmapping \
-    gmapping \
     image-geometry \
     camera-calibration-parsers \
     camera-info-manager \
@@ -151,7 +150,6 @@ RDEPENDS_${PN} = "\
     laser-assembler \
     laser-filters \
     move-base \
-    robot-pose-ekf \
     roslint \
     ros-pocketsphinx \
     rt-tests-support \

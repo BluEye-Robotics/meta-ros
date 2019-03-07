@@ -5,5 +5,3 @@ SRC_URI[sha256sum] = "024adbb7279fe0be8a0242bf8cb4987d2b07ae19f61653a37a9a68fb7d
 S = "${WORKDIR}/${ROS_SP}/${ROS_BPN}"
 
 inherit catkin
-
-ROS_SPN = "robot_model"

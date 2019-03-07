@@ -1,7 +1,7 @@
-From 473d1546f7bbc3bacce1c9b8ada28d591e4ff3f0 Mon Sep 17 00:00:00 2001
-From: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
-Date: Fri, 17 Feb 2017 10:49:30 +0200
-Subject: [PATCH] add explicit dependency on libeigen
+From 0be2fdd7a69a09a5173adefb9e7c550f8a5dcf53 Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Thu, 7 Mar 2019 16:42:53 +0100
+Subject: [PATCH] [PATCH] add explicit dependency on libeigen
 
 libeigen is an interface dependency needed by orocos-kdl and
 orocos-kdl does export this dependency, but it does so with
@@ -19,25 +19,26 @@ been declarated as a dependency in kdl-parser's recipe.
 
 Upstream-Status: Inappropriate [It's not kdl-parser's problem, but orocos-kdl's one]
 
-Signed-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>
-
+Original patch for indigo by: Dmitry Rozhkov
 ---
  kdl_parser/CMakeLists.txt | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/kdl_parser/CMakeLists.txt b/kdl_parser/CMakeLists.txt
-index fe6eab9..2ad285e 100644
+index cc67e9b..54675bd 100644
 --- a/kdl_parser/CMakeLists.txt
 +++ b/kdl_parser/CMakeLists.txt
-@@ -9,9 +9,10 @@ find_package(catkin REQUIRED
-   COMPONENTS roscpp rosconsole urdf cmake_modules
- )
+@@ -11,8 +11,9 @@ find_package(catkin REQUIRED
  find_package(orocos_kdl REQUIRED)
-+find_package(Eigen3 REQUIRED)
  find_package(TinyXML REQUIRED)
+ find_package(TinyXML2 REQUIRED)
++find_package(Eigen3 REQUIRED)
  
--include_directories(include ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
-+include_directories(include ${EIGEN3_INCLUDE_DIR} ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
+-include_directories(include ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${TinyXML2_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
++include_directories(include ${EIGEN3_INCLUDE_DIR} ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${TinyXML2_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
  
  link_directories(${catkin_LIBRARY_DIRS})
  link_directories(${Boost_LIBRARY_DIRS})
+-- 
+2.17.2 (Apple Git-113)
+
