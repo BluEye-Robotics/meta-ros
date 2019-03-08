@@ -10,4 +10,6 @@ SRC_URI = "https://github.com/ros-drivers-gbp/gscam-release/archive/release/melo
 SRC_URI[md5sum] = "6567623f010194a409217c757a9b8fe2"
 SRC_URI[sha256sum] = "c9b0612c0db015a239ed78e7cb445116f02c3212950858d9f0c7e33e2262db13"
 
+S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_SPN}"
+
 inherit catkin

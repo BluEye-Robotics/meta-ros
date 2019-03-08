@@ -185,7 +185,6 @@ RDEPENDS_${PN} = "\
     moveit-ros-planning \
     moveit-simple-controller-manager \
     mavros-msgs \
-    cv-camera \
     object-recognition-msgs \
     srdfdom \
     libmavconn \
