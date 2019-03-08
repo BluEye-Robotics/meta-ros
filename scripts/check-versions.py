@@ -90,7 +90,7 @@ def check_version(package, print_info="none", details=False):
         dist_ver = ""
     for filename in (os.path.join(package_dir, fn) for fn in os.listdir(package_dir)
                      if fn.endswith(".bb")):
-        version = filename.split("_")[1].split(".bb")[0]
+        version = filename.split("_")[-1].split(".bb")[0]
         versions.update([version])
 
         if details:
