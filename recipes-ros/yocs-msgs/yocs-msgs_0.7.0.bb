@@ -5,9 +5,9 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc
 
 DEPENDS = "actionlib-msgs std-msgs std-srvs geometry-msgs message-generation dynamic-reconfigure"
 
-SRC_URI = "https://github.com/yujinrobot/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "aa6d653e6f54fe01c7214008b67cadd2"
-SRC_URI[sha256sum] = "df0d541cd0752e444965e52980ba999e5c47e3d455caa0362d4cf9d75be8cccc"
+SRC_URI = "https://github.com/yujinrobot-release/yocs_msgs-release/archive/release/melodic/${ROS_SPN}/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
+SRC_URI[md5sum] = "ffb77e4ff25ced4c932217309eff52aa"
+SRC_URI[sha256sum] = "ff421bef61ecb9d4d2987f8330ae1a2e1d284fa8cfd9727364eaca31594a60ce"
 
 S = "${WORKDIR}/${ROS_SP}"
 
