@@ -6,9 +6,14 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=beda1cf298e14fa7de56a07a83308905"
 DEPENDS = ""
 
 SRC_URI = "${SOURCEFORGE_MIRROR}/${BPN}/distrib/GeographicLib-${PV}.tar.gz"
-SRC_URI[md5sum] = "e99153cf41bf64998cc4f91c00aea167"
-SRC_URI[sha256sum] = "7203d56123b6f6fb31842295d57b2418f79fb0db9a06f2f65ee9e415c6f0cb70"
+SRC_URI[md5sum] = "11300e88b4a38692b6a8712d5eafd4d7"
+SRC_URI[sha256sum] = "aec0ab52b6b9c9445d9d0a77e3af52257e21d6e74e94d8c2cb8fa6f11815ee2b"
 
 S = "${WORKDIR}/GeographicLib-${PV}"
+
+PACKAGES += "python-${PN} matlab-${PN} node-${PN}"
+FILES_python-${PN} = "/usr/lib/python/site-packages"
+FILES_matlab-${PN} = "/usr/share/matlab"
+FILES_node-${PN} = "/usr/lib/node_modules/"
 
 inherit cmake
