@@ -56,7 +56,12 @@ class Distribution():
             Distribution.data = yaml.load(urllib.request.urlopen(DIST_FILE).read())
         package = package.replace("-", "_")
         try:
-            return Distribution.data["repositories"][package]["source"]["url"].split(".git")[0]
+            base = Distribution.data["repositories"][package]["release"]["url"].split(".git")[0]
+            path = Distribution.data["repositories"][package]["release"]["tags"]["release"]
+            url = base + "/archive/" + path + ".tar.gz"
+            url = url.replace("{version}", "${PV}")
+            url = url.replace("{package}", "${ROS_SPN}")
+            return url
         except KeyError:
             raise DistroUrlException()
 
@@ -129,6 +134,7 @@ def check_version(package, print_info="none", details=False):
 
 
 def get_checksums_from_url(url):
+    print(url)
     data = urllib.request.urlopen(url).read()
     md5sum = hashlib.md5()
     md5sum.update(data)
@@ -141,36 +147,43 @@ def get_checksums_from_url(url):
 
 def update_checksums_in_file(package, filename, dist_version):
     with open(filename) as recipe_file:
-        data = recipe_file.read()
+        recipe_data = recipe_file.read()
 
     ros_pv = dist_version
     ros_spn = package.replace('-', '_')
     ros_sp = "%s-%s" % (ros_spn, ros_pv)
 
-    url = re.search(r'SRC_URI\s*=\s*"(\S*)\s*["\\]', data).group(1)
-    url = url.replace("${ROS_SPN}", ros_spn)
-    url = url.replace("${ROS_SP}", ros_sp)
-    url = url.replace("${PV}", ros_pv)
+    url = re.search(r'SRC_URI\s*=\s*"(\S*)\s*["\\]', recipe_data).group(1)
+    url = url.split(";")[0]
 
     if "protocol=git" in url:
         print_err("Using git protocol. Please update manually.")
 
-    url = url.split(";")[0]
+
+    url_abs = url.replace("${ROS_SPN}", ros_spn)
+    url_abs = url_abs.replace("${ROS_SP}", ros_sp)
+    url_abs = url_abs.replace("${PV}", ros_pv)
 
     repo = Distribution.get_url(package)
+    repo_abs = repo.replace("${ROS_SPN}", ros_spn)
+    repo_abs = repo_abs.replace("${ROS_SP}", ros_sp)
+    repo_abs = repo_abs.replace("${PV}", ros_pv)
 
     if repo not in url:
-        print(url)
-        print(repo)
-        raise MoveRepoExcetion()
+        print("recipe: %s" % url)
+        print("repo:   %s" % repo)
+        #raise MoveRepoExcetion()
+        print("Update repo url")
+        recipe_data = recipe_data.replace(url, repo)
+        url_abs = repo_abs
 
     try:
-        md5sum = re.search(r'SRC_URI\[md5sum\]\s*=\s*"(\S*)"', data).group(1)
+        md5sum = re.search(r'SRC_URI\[md5sum\]\s*=\s*"(\S*)"', recipe_data).group(1)
     except AttributeError:
         print_err("Error reading md5sum in package %s. Please update manually." % package)
         return False
     try:
-        sha256sum = re.search(r'SRC_URI\[sha256sum\]\s*=\s*"(\S*)"', data).group(1)
+        sha256sum = re.search(r'SRC_URI\[sha256sum\]\s*=\s*"(\S*)"', recipe_data).group(1)
     except AttributeError:
         print_err("Error reading sha256sum in package %s. Please update manually." % package)
         return False
@@ -178,15 +191,12 @@ def update_checksums_in_file(package, filename, dist_version):
     if len(md5sum) != 32 and len(sha256sum) != 64:
         print_err("Failed reading checksums.")
         return False
-
-    md5sum_new, sha256sum_new = get_checksums_from_url(url)
+    md5sum_new, sha256sum_new = get_checksums_from_url(url_abs)
     print_debug("Updating checksums in file %s" % filename)
     print_debug("old md5: %s" % md5sum)
     print_debug("new md5: %s" % md5sum_new)
     print_debug("old sha256: %s" % sha256sum)
     print_debug("new sha256: %s" % sha256sum_new)
-    with open(filename) as recipe_file:
-        recipe_data = recipe_file.read()
     recipe_data = recipe_data.replace(md5sum, md5sum_new)
     recipe_data = recipe_data.replace(sha256sum, sha256sum_new)
     with open(filename, 'w') as recipe_file:
