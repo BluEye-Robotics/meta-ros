@@ -1,0 +1,25 @@
+From b3313526f0517260842f3aeb5d2a5a409e7728bd Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Sun, 10 Mar 2019 01:40:48 +0100
+Subject: [PATCH] remove deprecated and unused boost signals
+
+---
+ fake_localization/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fake_localization/CMakeLists.txt b/fake_localization/CMakeLists.txt
+index dd81ef2c..7643dfdd 100644
+--- a/fake_localization/CMakeLists.txt
++++ b/fake_localization/CMakeLists.txt
+@@ -14,7 +14,7 @@ find_package(catkin REQUIRED
+         )
+ 
+ 
+-find_package(Boost REQUIRED COMPONENTS signals)
++find_package(Boost REQUIRED) 
+ 
+ catkin_package(
+     CATKIN_DEPENDS
+-- 
+2.19.1
+

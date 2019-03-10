@@ -1,0 +1,25 @@
+From 0aa4b850f0634d0cbbcccc82facd41a127efeb9f Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Sat, 9 Mar 2019 23:36:46 +0100
+Subject: [PATCH] Remove SYSTEM from cmake include directories
+
+---
+ diff_drive_controller/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/diff_drive_controller/CMakeLists.txt b/diff_drive_controller/CMakeLists.txt
+index 2c39689..400bdb4 100644
+--- a/diff_drive_controller/CMakeLists.txt
++++ b/diff_drive_controller/CMakeLists.txt
+@@ -21,7 +21,7 @@ include_directories(
+   include
+ )
+ 
+-include_directories(SYSTEM
++include_directories(
+   ${catkin_INCLUDE_DIRS}
+ )
+ 
+-- 
+2.19.1
+

@@ -7,10 +7,6 @@ DEPENDS = "sensor-msgs control-msgs actionlib actionlib-msgs simple-message indu
 
 require industrial-core.inc
 
-SRC_URI += " \
-           file://0001-client-build-unit-tests-conditionally.patch \
-           "
-
 EXTRA_OECMAKE_append = "\
     -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=NEVER \
     "

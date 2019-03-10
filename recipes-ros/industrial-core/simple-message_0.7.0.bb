@@ -8,5 +8,3 @@ DEPENDS = "roscpp industrial-msgs"
 RDEPENDS_${PN} = "industrial-msgs"
 
 require industrial-core.inc
-
-SRC_URI += "file://0001-simple_message-build-unit-tests-conditionally.patch;striplevel=2"
