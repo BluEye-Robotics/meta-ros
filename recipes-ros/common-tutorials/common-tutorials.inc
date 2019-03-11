@@ -2,4 +2,6 @@ SRC_URI = "https://github.com/ros-gbp/common_tutorials-release/archive/release/m
 
 inherit catkin
 
+S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}-${PV}"
+
 ROS_SPN = "common_tutorials"

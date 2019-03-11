@@ -7,6 +7,4 @@ SRC_URI[sha256sum] = "399778f44a140cd9fd5b0ed41b8c88408803791a64b0c3d006bca4b174
 
 DEPENDS = "roscpp nodelet std-msgs"
 
-S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}-${PV}"
-
 require common-tutorials.inc

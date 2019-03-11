@@ -7,6 +7,4 @@ SRC_URI[sha256sum] = "2a421d7ea4d04ba27c7221abd753f1ebbe040227df1e4c87a3df559064
 
 DEPENDS = "roscpp pluginlib"
 
-S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}-${PV}"
-
 require common-tutorials.inc

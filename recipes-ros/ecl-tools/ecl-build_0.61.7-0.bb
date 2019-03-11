@@ -7,7 +7,4 @@ SRC_URI[sha256sum] = "6133fdac73fbedffae19ec5ec6b203225f7e8db9ac1d88fca425d95dc9
 
 DEPENDS = "ecl-license"
 
-S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}-${PV}"
-
-
 require ecl-tools.inc

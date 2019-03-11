@@ -7,6 +7,6 @@ SRC_URI[sha256sum] = "7047d449482c347110d391bd3aec0ba21c28ec04578996c93c3607afcd
 
 DEPENDS = "roscpp actionlib message-generation std-msgs actionlib-msgs"
 
-S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}"
-
 require common-tutorials.inc
+
+S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}"
