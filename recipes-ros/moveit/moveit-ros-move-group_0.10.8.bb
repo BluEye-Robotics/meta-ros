@@ -7,6 +7,8 @@ DEPENDS = "moveit-core moveit-ros-planning std-srvs"
 
 require moveit.inc
 
+SRC_URI += "file://0001-remove-deprecated-and-unused-boost-signals.patch;striplevel=3"
+
 ROS_BPN = "moveit_ros/move_group"
 
 RDEPENDS_${PN} += "moveit-kinematics"

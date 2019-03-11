@@ -8,6 +8,6 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=22;endline=22;md5=01c2bc31767cc
 
 DEPENDS = "libeigen cmake-modules dynamic-reconfigure geometry-msgs laser-geometry map-msgs \
     message-filters message-generation nav-msgs pcl-conversions pcl-ros pluginlib roscpp \
-    sensor-msgs std-msgs tf visualization-msgs voxel-grid"
+    sensor-msgs std-msgs tf visualization-msgs voxel-grid tf2-geometry-msgs tf2-sensor-msgs"
 
 require navigation.inc

@@ -1,0 +1,24 @@
+From 3a2347bc800ea32b6890aec3d6a4838e48542757 Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Mon, 11 Mar 2019 12:46:55 +0100
+Subject: [PATCH] Add opencv header
+
+---
+ ar_track_alvar/include/ar_track_alvar/Alvar.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/ar_track_alvar/include/ar_track_alvar/Alvar.h b/ar_track_alvar/include/ar_track_alvar/Alvar.h
+index 3418557..e868617 100644
+--- a/ar_track_alvar/include/ar_track_alvar/Alvar.h
++++ b/ar_track_alvar/include/ar_track_alvar/Alvar.h
+@@ -157,6 +157,7 @@
+  * \brief This file defines library export definitions, version numbers and
+  * build information.
+  */
++#include <opencv2/imgproc.hpp> 
+ 
+ #if defined(WIN32) && !defined(ALVAR_STATIC)
+     #ifdef ALVAR_BUILD
+-- 
+2.19.1
+

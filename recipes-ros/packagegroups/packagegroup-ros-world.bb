@@ -166,7 +166,6 @@ RDEPENDS_${PN} = "\
     ros-arduino-firmware \
     ros-arduino-msgs \
     ros-arduino-python \
-    frontier-exploration \
     hector-mapping \
     rosauth \
     rosapi \
