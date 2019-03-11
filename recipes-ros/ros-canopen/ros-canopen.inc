@@ -1,8 +1,6 @@
-SRC_URI = "https://github.com/ros-industrial-release/ros_canopen/archive/melodic/${ROS_SPN}/${PV}.tar.gz;downloadfilename=${ROS_SP}.tar.gz"
-SRC_URI[md5sum] = "12f9f5ce82d1bb678752011786c7828a"
-SRC_URI[sha256sum] = "b822d2a70eb273076d7dfde847bd52593d6577503207beb98a43b96855f64250"
+SRC_URI = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/${ROS_BPN}/${PV}.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 
-S = "${WORKDIR}/${ROS_SPN}-${PV}/${ROS_BPN}"
+S = "${WORKDIR}/${ROS_SPN}-release-release-melodic-${ROS_BPN}-${PV}"
 
 inherit catkin
 
