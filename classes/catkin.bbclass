@@ -44,3 +44,19 @@ SYSROOT_PREPROCESS_FUNCS += "catkin_sysroot_preprocess"
 catkin_sysroot_preprocess () {
     sysroot_stage_dir ${D}${ros_sysconfdir} ${SYSROOT_DESTDIR}${ros_sysconfdir}
 }
+
+python do_fix_dir() {
+    dir = d.getVar("S")
+    if not os.path.isfile(os.path.join(dir, "package.xml")):
+        d.setVar("S", dir[:-len("-"+d.getVar("PV"))])
+}
+
+do_fix_dir_mv() {
+    dir = d.getVar("S")
+    dir_wo = d.setVar("S", dir[:-len("-"+d.getVar("PV"))])
+    os.exec("mdir -p %s" % dir)
+    os.exec("mv %s/* %s" % (dir_wo, dir))
+}
+
+addtask do_fix_dir after do_unpack before do_populate_lic
+
