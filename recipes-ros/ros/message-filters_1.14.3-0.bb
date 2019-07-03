@@ -9,10 +9,10 @@ DEPENDS = "boost rosconsole roscpp rostest rosunit rosconsole roscpp"
 RDEPENDS_${PN} = "rosconsole roscpp"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
-SRC_URI[md5sum] = "06aba135449159ba348f66ff23ece11b"
-SRC_URI[sha256sum] = "3eb38ff43701662023ac5e7141fb50303fb27657822275b4d4da92ed661ff72d"
+SRC_URI[md5sum] = "431dae23c4cbf44aed4139824044ce2b"
+SRC_URI[sha256sum] = "3a6ce5214cb6b17a3af6268ddac55c5ac812ef09eb97685e6930da32799a8a3e"
 
 ROS_SPN = "ros_comm"
-S = "${WORKDIR}/ros_comm-release-release-melodic-message_filters"
+S = "${WORKDIR}/ros_comm-release-release-melodic-message_filters-1.14.3-0"
 
 inherit catkin

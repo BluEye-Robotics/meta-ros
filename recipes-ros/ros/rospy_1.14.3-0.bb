@@ -9,10 +9,10 @@ DEPENDS = "genpy python-numpy python-rospkg python-pyyaml roscpp rosgraph rosgra
 RDEPENDS_${PN} = "genpy python-numpy python-rospkg python-pyyaml roscpp rosgraph rosgraph-msgs roslib std-msgs"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rospy/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
-SRC_URI[md5sum] = "b5027baecfc599fce9d2c1e399b8169a"
-SRC_URI[sha256sum] = "114c5f35bb368343f3a6b8f58374369344bb4ec8aae377ba33fca2ada0a7c07f"
+SRC_URI[md5sum] = "d2dcef8e41fb758b6ef06eee70e292f6"
+SRC_URI[sha256sum] = "3dbd699e3d8cea6b5fc18d98d184a1aedb4171a0eca3cd9ba280f320b3607468"
 
 ROS_SPN = "ros_comm"
-S = "${WORKDIR}/ros_comm-release-release-melodic-rospy"
+S = "${WORKDIR}/ros_comm-release-release-melodic-rospy-1.14.3-0"
 
 inherit catkin
