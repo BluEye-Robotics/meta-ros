@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-rospkg"
+RDEPENDS_${PN} = "python-rospkg python3-rospkg"
 
 SRC_URI = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosclean/1.14.7-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "5cd383f5281bcaa97f77443ba9de01ae"

@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=22;endline=22;md5=d566ef916e9de
 
 DEPENDS = "curl roslib rosconsole boost"
 
-RDEPENDS_${PN} = "python-rospkg"
+RDEPENDS_${PN} = "python-rospkg python3-rospkg"
 
 SRC_URI = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.5-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "4b4e4ae3ae0e5488f9ee8b4645c29569"

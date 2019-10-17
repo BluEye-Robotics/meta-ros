@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "GPL"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=21;endline=21;md5=162b49cfbae9eadf37c9b89b2d2ac6be"
 
-DEPENDS = "python-enum34 python-packaging python-virtualenv rosbash virtualenv"
+DEPENDS = "python-enum34 python-packaging python-virtualenv python3-dev python3-venv rosbash virtualenv"
 
 RDEPENDS_${PN} = ""
 
