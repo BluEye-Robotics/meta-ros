@@ -87,7 +87,7 @@ DEP_RENAME = {
     "libconsole-bridge-dev": "console-bridge",
     "python-wxtools": "",
     "python-yaml": "python-pyyaml",
-    "python3-yaml": "python3-pyyaml",
+    "python3-yaml": "python-pyyaml",
     "google-mock": "gmock",
     "eigen": "libeigen",
     "roslisp": "",
