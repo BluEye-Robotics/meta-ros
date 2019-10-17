@@ -1,5 +1,5 @@
 *~
-.*.swp
+.*.sw*
 .idea
 scripts/generator/Pipfile.lock
 scripts/generator/__pycache__/

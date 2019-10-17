@@ -87,6 +87,7 @@ DEP_RENAME = {
     "libconsole-bridge-dev": "console-bridge",
     "python-wxtools": "",
     "python-yaml": "python-pyyaml",
+    "python3-yaml": "python3-pyyaml",
     "google-mock": "gmock",
     "eigen": "libeigen",
     "roslisp": "",
@@ -203,6 +204,7 @@ class XmlParser:
         dependencies = []
         recipe_depends = self.tree.xpath("/package/exec_depend") + self.tree.xpath("/package/run_depend")
         for dependency in recipe_depends:
+            print(dependency.text)
             dep = dependency.text.replace("_", "-") #.replace("-dev", "")
             if dep in DEP_RENAME.keys():
                 dep = DEP_RENAME[dep]
@@ -211,6 +213,7 @@ class XmlParser:
                 raise Exception("dep blacklisted")
             dep = dep.replace("python-", "python3-")
             dependencies.append(dep)
+        print(dependencies)
         return dependencies
 
     def getLicenseLineNumber(self):
