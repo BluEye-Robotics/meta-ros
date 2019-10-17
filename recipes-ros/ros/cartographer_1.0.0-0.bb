@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=3dce4ba60d7e51ec64f3c3dc18672dd3"
 
-DEPENDS = "g++-static gmock python-sphinx boost libeigen libcairo2-dev libceres-dev libgflags-dev libgoogle-glog-dev lua5.2-dev protobuf-dev"
+DEPENDS = "g++-static gmock python3-sphinx boost libeigen libcairo2-dev libceres-dev libgflags-dev libgoogle-glog-dev lua5.2-dev protobuf-dev"
 
 RDEPENDS_${PN} = ""
 

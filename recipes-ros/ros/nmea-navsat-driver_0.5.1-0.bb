@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "rospy python-pyserial geometry-msgs nmea-msgs sensor-msgs"
+RDEPENDS_${PN} = "rospy python3-pyserial geometry-msgs nmea-msgs sensor-msgs"
 
 SRC_URI = "https://github.com/ros-drivers-gbp/nmea_navsat_driver-release/archive/release/melodic/nmea_navsat_driver/0.5.1-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "e986e81acb1c44754a858491ed308f1f"

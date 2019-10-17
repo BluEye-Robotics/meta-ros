@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9de
 
 DEPENDS = "genmsg"
 
-RDEPENDS_${PN} = "python-pyyaml python3-yaml"
+RDEPENDS_${PN} = "python3-pyyaml python3-yaml"
 
 SRC_URI = "https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.9-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "3bae1990378e617a7aa5617805954147"

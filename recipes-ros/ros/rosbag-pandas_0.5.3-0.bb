@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=82f0323c08605
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-matplotlib python-numpy python-pandas rosbag rospy-message-converter roslib"
+RDEPENDS_${PN} = "python3-matplotlib python3-numpy python3-pandas rosbag rospy-message-converter roslib"
 
 SRC_URI = "https://github.com/eurogroep/rosbag_pandas-release/archive/release/melodic/rosbag_pandas/0.5.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "7524acf6ce0198fc3797d9c3d878a2ae"

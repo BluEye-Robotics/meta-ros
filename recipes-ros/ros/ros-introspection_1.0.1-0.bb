@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "rosmsg python-requests"
+RDEPENDS_${PN} = "rosmsg python3-requests"
 
 SRC_URI = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/ros_introspection/1.0.1-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "39b5c4c640370c9f1d03b3e23523d4b8"

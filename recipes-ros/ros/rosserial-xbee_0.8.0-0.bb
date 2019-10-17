@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=16;endline=16;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rospy rosserial-msgs diagnostic-msgs python-pyserial rosserial-python"
+DEPENDS = "rospy rosserial-msgs diagnostic-msgs python3-pyserial rosserial-python"
 
-RDEPENDS_${PN} = "rospy rosserial-msgs diagnostic-msgs python-pyserial rosserial-python"
+RDEPENDS_${PN} = "rospy rosserial-msgs diagnostic-msgs python3-pyserial rosserial-python"
 
 SRC_URI = "https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_xbee/0.8.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "71e5e25305517984a19a07c9813b9afe"

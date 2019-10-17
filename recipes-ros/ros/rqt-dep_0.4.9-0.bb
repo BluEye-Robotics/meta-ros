@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-pyqt5 python-rospkg qt-dotgraph qt-gui qt-gui-py-common rqt-graph rqt-gui-py"
+DEPENDS = "python3-pyqt5 python3-rospkg qt-dotgraph qt-gui qt-gui-py-common rqt-graph rqt-gui-py"
 
-RDEPENDS_${PN} = "python-pyqt5 python-rospkg qt-dotgraph qt-gui qt-gui-py-common rqt-graph rqt-gui-py"
+RDEPENDS_${PN} = "python3-pyqt5 python3-rospkg qt-dotgraph qt-gui qt-gui-py-common rqt-graph rqt-gui-py"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_dep-release/archive/release/melodic/rqt_dep/0.4.9-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c29ca8c41c8744b8be0b085c916c1dd7"

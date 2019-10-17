@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rocon-master-info rocon-console rocon-ebnf rocon-interactions rocon-launch rocon-python-comms rocon-python-redis rocon-python-utils rocon-python-wifi rocon-semantic-version rocon-uri"
+DEPENDS = "rocon-master-info rocon-console rocon-ebnf rocon-interactions rocon-launch rocon-python3-comms rocon-python3-redis rocon-python3-utils rocon-python3-wifi rocon-semantic-version rocon-uri"
 
-RDEPENDS_${PN} = "rocon-master-info rocon-console rocon-ebnf rocon-interactions rocon-launch rocon-python-comms rocon-python-redis rocon-python-utils rocon-python-wifi rocon-semantic-version rocon-uri"
+RDEPENDS_${PN} = "rocon-master-info rocon-console rocon-ebnf rocon-interactions rocon-launch rocon-python3-comms rocon-python3-redis rocon-python3-utils rocon-python3-wifi rocon-semantic-version rocon-uri"
 
 SRC_URI = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_tools/0.3.2-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "db93653d10929791c2a89a79e81e48d1"

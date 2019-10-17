@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=7;endline=7;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = " python-tornado python-twisted-core rosbridge-library rosbridge-msgs rosapi rospy rosauth"
+RDEPENDS_${PN} = " python3-tornado python3-twisted-core rosbridge-library rosbridge-msgs rosapi rospy rosauth"
 
 SRC_URI = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_server/0.11.3-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c2f37edfff5394dd4909bcd03a1b93e7"

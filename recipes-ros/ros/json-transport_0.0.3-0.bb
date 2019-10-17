@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=37;endline=37;md5=d566ef916e9de
 
 DEPENDS = "json-msgs roscpp"
 
-RDEPENDS_${PN} = "python-msgpack"
+RDEPENDS_${PN} = "python3-msgpack"
 
 SRC_URI = "https://github.com/locusrobotics/json_transport-release/archive/release/melodic/json_transport/0.0.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "4b3f8af4e6687772aa16614ed1583ebf"

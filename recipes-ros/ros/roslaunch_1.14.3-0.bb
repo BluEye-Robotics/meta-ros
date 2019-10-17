@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=16;endline=16;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-paramiko python-rospkg python-pyyaml rosclean rosgraph-msgs roslib rosmaster rosout rosparam rosunit"
+DEPENDS = "python3-paramiko python3-rospkg python3-pyyaml rosclean rosgraph-msgs roslib rosmaster rosout rosparam rosunit"
 
-RDEPENDS_${PN} = "python-paramiko python-rospkg python-pyyaml rosclean rosgraph-msgs roslib rosmaster rosout rosparam rosunit"
+RDEPENDS_${PN} = "python3-paramiko python3-rospkg python3-pyyaml rosclean rosgraph-msgs roslib rosmaster rosout rosparam rosunit"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roslaunch/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "ceba58cef57e7a30abf17e40482badf4"

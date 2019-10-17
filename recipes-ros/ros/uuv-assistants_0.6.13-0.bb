@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=15;endline=15;md5=82f0323c08605
 
 DEPENDS = "roscpp nav-msgs geometry-msgs sensor-msgs tf topic-tools"
 
-RDEPENDS_${PN} = "rospy rostopic rosgraph gazebo-msgs visualization-msgs python-numpy"
+RDEPENDS_${PN} = "rospy rostopic rosgraph gazebo-msgs visualization-msgs python3-numpy"
 
 SRC_URI = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_assistants/0.6.13-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "d0b730692b93f3a7ae045748a3931184"

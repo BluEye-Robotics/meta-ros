@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=17;endline=17;md5=75730354549103aaba72b66caf53717b"
 
-DEPENDS = "dynamic-reconfigure python-pyqt5 rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
+DEPENDS = "dynamic-reconfigure python3-pyqt5 rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
 
-RDEPENDS_${PN} = "dynamic-reconfigure python-pyqt5 rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
+RDEPENDS_${PN} = "dynamic-reconfigure python3-pyqt5 rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/melodic/rqt_reconfigure/0.4.10-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "a2ead65c72b082038b91199375a84958"

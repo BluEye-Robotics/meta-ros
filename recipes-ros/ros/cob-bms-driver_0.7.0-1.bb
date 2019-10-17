@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=14;endline=14;md5=3dce4ba60d7e5
 
 DEPENDS = "diagnostic-msgs diagnostic-updater roscpp socketcan-interface std-msgs"
 
-RDEPENDS_${PN} = "cob-msgs cob-srvs python-numpy rospy"
+RDEPENDS_${PN} = "cob-msgs cob-srvs python3-numpy rospy"
 
 SRC_URI = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_bms_driver/0.7.0-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "b49d4417f154b62850b9d36ec5d94c3c"

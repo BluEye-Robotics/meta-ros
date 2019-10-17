@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "angles boost cmake-modules libeigen roscpp sensor-msgs tf angles boost libeigen python-numpy roscpp sensor-msgs tf"
+DEPENDS = "angles boost cmake-modules libeigen roscpp sensor-msgs tf angles boost libeigen python3-numpy roscpp sensor-msgs tf"
 
-RDEPENDS_${PN} = "angles boost libeigen python-numpy roscpp sensor-msgs tf"
+RDEPENDS_${PN} = "angles boost libeigen python3-numpy roscpp sensor-msgs tf"
 
 SRC_URI = "https://github.com/ros-gbp/laser_geometry-release/archive/release/melodic/laser_geometry/1.6.4-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "f9cc63311e2daf49ca415324dde352c3"

@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=14;endline=14;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-setuptools"
+DEPENDS = "python3-setuptools"
 
-RDEPENDS_${PN} = "python-enum34 python-pydot"
+RDEPENDS_${PN} = "python3-enum34 python3-pydot"
 
 SRC_URI = "https://github.com/stonier/py_trees-release/archive/release/melodic/py_trees/0.6.8-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "591a512c55a301a91a69ec7d019c6b0e"

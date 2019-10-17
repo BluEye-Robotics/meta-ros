@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "geometry-msgs gl-dependency python-opengl python-pyqt5 python-rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf"
+DEPENDS = "geometry-msgs gl-dependency python3-opengl python3-pyqt5 python3-rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf"
 
-RDEPENDS_${PN} = "geometry-msgs gl-dependency python-opengl python-pyqt5 python-rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf"
+RDEPENDS_${PN} = "geometry-msgs gl-dependency python3-opengl python3-pyqt5 python3-rospkg rospy rostopic rqt-gui rqt-gui-py rqt-py-common tf"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_pose_view-release/archive/release/melodic/rqt_pose_view/0.5.8-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "f0a3b526ff8475b1354318a6095def9d"

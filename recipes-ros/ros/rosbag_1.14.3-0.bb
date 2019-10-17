@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "boost cpp-common python-imaging rosbag-storage rosconsole roscpp roscpp-serialization std-srvs topic-tools xmlrpcpp boost genmsg genpy python-pycrypto python-gnupg python-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
+DEPENDS = "boost cpp-common python3-imaging rosbag-storage rosconsole roscpp roscpp-serialization std-srvs topic-tools xmlrpcpp boost genmsg genpy python3-pycrypto python3-gnupg python3-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
 
-RDEPENDS_${PN} = "boost genmsg genpy python-pycrypto python-gnupg python-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
+RDEPENDS_${PN} = "boost genmsg genpy python3-pycrypto python3-gnupg python3-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "b5ff01cfa877cbfc49a8c079861b12fb"

@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9de
 
 DEPENDS = "exotica-core exotica-core-task-maps exotica-python exotica-aico-solver exotica-ik-solver sensor-msgs"
 
-RDEPENDS_${PN} = "exotica-collision-scene-fcl exotica-ompl-solver exotica-time-indexed-rrt-connect-solver robot-state-publisher  geometry-msgs visualization-msgs interactive-markers python-orocos-kdl"
+RDEPENDS_${PN} = "exotica-collision-scene-fcl exotica-ompl-solver exotica-time-indexed-rrt-connect-solver robot-state-publisher  geometry-msgs visualization-msgs interactive-markers python3-orocos-kdl"
 
 SRC_URI = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_examples/5.0.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "9d76d9808bdb9f89a6aadc7a55b7e2f5"

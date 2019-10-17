@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=17;endline=17;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "assimp boost libeigen ffmpeg  libjpeg opencv libpcap libudev-dev libusb-1.0-dev octomap python python-numpy suitesparse wx-common wxwidgets zlib"
+DEPENDS = "assimp boost libeigen ffmpeg  libjpeg opencv libpcap libudev-dev libusb-1.0-dev octomap python python3-numpy suitesparse wx-common wxwidgets zlib"
 
 RDEPENDS_${PN} = "catkin"
 

@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=7;endline=7;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "message-generation std-msgs message-runtime rospy tf std-msgs pr2-msgs nav-msgs geometry-msgs visualization-msgs python-mechanize"
+DEPENDS = "message-generation std-msgs message-runtime rospy tf std-msgs pr2-msgs nav-msgs geometry-msgs visualization-msgs python3-mechanize"
 
-RDEPENDS_${PN} = "message-runtime rospy tf std-msgs pr2-msgs nav-msgs geometry-msgs visualization-msgs python-mechanize"
+RDEPENDS_${PN} = "message-runtime rospy tf std-msgs pr2-msgs nav-msgs geometry-msgs visualization-msgs python3-mechanize"
 
 SRC_URI = "https://github.com/ros-gbp/wifi_ddwrt-release/archive/release/melodic/wifi_ddwrt/0.2.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "2e43ddfc6ac811f1634982f164935c75"

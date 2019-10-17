@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=3dce4ba60d7e51ec64f3c3dc18672dd3"
 
-DEPENDS = "gmock g++-static protobuf-dev python-sphinx cartographer cartographer-ros-msgs eigen-conversions geometry-msgs libgflags-dev libgoogle-glog-dev pcl message-runtime nav-msgs pcl-conversions robot-state-publisher rosbag roscpp roslaunch roslib sensor-msgs std-msgs tf2 tf2-eigen tf2-ros urdf visualization-msgs"
+DEPENDS = "gmock g++-static protobuf-dev python3-sphinx cartographer cartographer-ros-msgs eigen-conversions geometry-msgs libgflags-dev libgoogle-glog-dev pcl message-runtime nav-msgs pcl-conversions robot-state-publisher rosbag roscpp roslaunch roslib sensor-msgs std-msgs tf2 tf2-eigen tf2-ros urdf visualization-msgs"
 
 RDEPENDS_${PN} = ""
 

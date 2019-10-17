@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "LGPL"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=46ee8693f40a89a31023e97ae17ecf19"
 
-DEPENDS = "orocos-kdl python-orocos-kdl"
+DEPENDS = "orocos-kdl python3-orocos-kdl"
 
-RDEPENDS_${PN} = "orocos-kdl python-orocos-kdl"
+RDEPENDS_${PN} = "orocos-kdl python3-orocos-kdl"
 
 SRC_URI = "https://github.com/orocos/orocos-kdl-release/archive/release/melodic/orocos_kinematics_dynamics/1.4.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c4d64355fb2ccb5e3bb2c06f39f4222a"

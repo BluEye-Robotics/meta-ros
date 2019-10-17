@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=16;endline=16;md5=d566ef916e9de
 
 DEPENDS = "roscpp moveit-core pluginlib libeigen tf2 tf2-kdl orocos-kdl"
 
-RDEPENDS_${PN} = "python-lxml liburdfdom-tools"
+RDEPENDS_${PN} = "python3-lxml liburdfdom-tools"
 
 SRC_URI = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.2-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "770c1b5c0336ed14dde8973911ebd482"

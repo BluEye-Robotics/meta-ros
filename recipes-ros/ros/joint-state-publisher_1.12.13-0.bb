@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "rospy python-pyqt5 sensor-msgs"
+RDEPENDS_${PN} = "rospy python3-pyqt5 sensor-msgs"
 
 SRC_URI = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/melodic/joint_state_publisher/1.12.13-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "03a430da345c60bbb7fc3c659c8a6380"

@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rospy rqt-gui rqt-gui-py python-pyqt5 dataspeed-pds-msgs"
+DEPENDS = "rospy rqt-gui rqt-gui-py python3-pyqt5 dataspeed-pds-msgs"
 
 RDEPENDS_${PN} = ""
 

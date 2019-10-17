@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-catkin-pkg rospy roslaunch rocon-console rocon-python-utils rosbash"
+DEPENDS = "python3-catkin-pkg rospy roslaunch rocon-console rocon-python3-utils rosbash"
 
-RDEPENDS_${PN} = "rospy roslaunch rocon-console rocon-python-utils rosbash"
+RDEPENDS_${PN} = "rospy roslaunch rocon-console rocon-python3-utils rosbash"
 
 SRC_URI = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_launch/0.3.2-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "9057371eeda7cb24743c8ad85aa0e086"

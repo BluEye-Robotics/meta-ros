@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "LGPL-3.0"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=19;endline=19;md5=b691248d2f70cdaeeaf13696ada5d47c"
 
-DEPENDS = "python-setuptools python-lxml python-future python"
+DEPENDS = "python3-setuptools python3-lxml python3-future python"
 
 RDEPENDS_${PN} = "catkin"
 

@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-pyqt5 python-rospkg rosnode rosservice rospy rqt-gui rqt-gui-py"
+DEPENDS = "python3-pyqt5 python3-rospkg rosnode rosservice rospy rqt-gui rqt-gui-py"
 
-RDEPENDS_${PN} = "python-pyqt5 python-rospkg rosnode rosservice rospy rqt-gui rqt-gui-py"
+RDEPENDS_${PN} = "python3-pyqt5 python3-rospkg rosnode rosservice rospy rqt-gui rqt-gui-py"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_logger_level-release/archive/release/melodic/rqt_logger_level/0.4.8-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "70bcd3612e1f7575e22ae8dcd191fe57"

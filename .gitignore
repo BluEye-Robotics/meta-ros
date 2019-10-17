@@ -1,3 +1,6 @@
 *~
 .*.swp
 .idea
+scripts/generator/Pipfile.lock
+scripts/generator/__pycache__/
+scripts/generator/downloads/

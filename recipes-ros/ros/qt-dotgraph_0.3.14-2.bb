@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-pydot python3-pydot python-pyqt5"
+RDEPENDS_${PN} = "python3-pydot python3-pydot python3-pyqt5"
 
 SRC_URI = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_dotgraph/0.3.14-2.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "d1a10e6219b7f7c361613d51ad393428"

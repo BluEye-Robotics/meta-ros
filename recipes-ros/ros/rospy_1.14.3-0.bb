@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=23;endline=23;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "genpy python-numpy python-rospkg python-pyyaml roscpp rosgraph rosgraph-msgs roslib std-msgs"
+DEPENDS = "genpy python3-numpy python3-rospkg python3-pyyaml roscpp rosgraph rosgraph-msgs roslib std-msgs"
 
-RDEPENDS_${PN} = "genpy python-numpy python-rospkg python-pyyaml roscpp rosgraph rosgraph-msgs roslib std-msgs"
+RDEPENDS_${PN} = "genpy python3-numpy python3-rospkg python3-pyyaml roscpp rosgraph rosgraph-msgs roslib std-msgs"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rospy/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "d2dcef8e41fb758b6ef06eee70e292f6"

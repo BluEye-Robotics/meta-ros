@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "calibration-msgs python-matplotlib python-orocos-kdl python-scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs"
+DEPENDS = "calibration-msgs python3-matplotlib python3-orocos-kdl python3-scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs"
 
-RDEPENDS_${PN} = "calibration-msgs python-matplotlib python-orocos-kdl python-scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs"
+RDEPENDS_${PN} = "calibration-msgs python3-matplotlib python3-orocos-kdl python3-scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs"
 
 SRC_URI = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_estimation/0.10.14-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "9224bd7729da163f6465ede4df955f86"

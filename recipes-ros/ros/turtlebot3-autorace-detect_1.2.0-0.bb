@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=3dce4ba60d7e51e
 
 DEPENDS = "dynamic-reconfigure"
 
-RDEPENDS_${PN} = "rospy std-msgs sensor-msgs geometry-msgs nav-msgs move-base-msgs tf cv-bridge  python-numpy python-enum34"
+RDEPENDS_${PN} = "rospy std-msgs sensor-msgs geometry-msgs nav-msgs move-base-msgs tf cv-bridge  python3-numpy python3-enum34"
 
 SRC_URI = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/melodic/turtlebot3_autorace_detect/1.2.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "15845943e6cf1317ea1f8349e802dbfc"

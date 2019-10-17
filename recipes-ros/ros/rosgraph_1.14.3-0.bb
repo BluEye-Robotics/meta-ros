@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-netifaces python-rospkg python-pyyaml"
+DEPENDS = "python3-netifaces python3-rospkg python3-pyyaml"
 
-RDEPENDS_${PN} = "python-netifaces python-rospkg python-pyyaml"
+RDEPENDS_${PN} = "python3-netifaces python3-rospkg python3-pyyaml"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosgraph/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "69220bd27ddfe1836d251f8b0409ddc3"

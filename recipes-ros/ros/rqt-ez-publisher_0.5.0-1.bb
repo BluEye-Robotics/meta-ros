@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rostest python-catkin-pkg rospy rqt-gui rqt-gui-py rqt-py-common tf tf2-msgs geometry-msgs"
+DEPENDS = "rostest python3-catkin-pkg rospy rqt-gui rqt-gui-py rqt-py-common tf tf2-msgs geometry-msgs"
 
 RDEPENDS_${PN} = "rospy rqt-gui rqt-gui-py rqt-py-common tf tf2-msgs geometry-msgs"
 

@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=3dce4ba60d7e51e
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "rospy roslaunch std-msgs python-numpy python-enum34"
+RDEPENDS_${PN} = "rospy roslaunch std-msgs python3-numpy python3-enum34"
 
 SRC_URI = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace-release/archive/release/melodic/turtlebot3_autorace_core/1.2.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c2d00aa5c8d8639b25a5e8a981848e92"

@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "geometry-msgs python-pyqt5 python-rospkg rostopic rqt-gui rqt-gui-py"
+DEPENDS = "geometry-msgs python3-pyqt5 python3-rospkg rostopic rqt-gui rqt-gui-py"
 
-RDEPENDS_${PN} = "geometry-msgs python-pyqt5 python-rospkg rostopic rqt-gui rqt-gui-py"
+RDEPENDS_${PN} = "geometry-msgs python3-pyqt5 python3-rospkg rostopic rqt-gui rqt-gui-py"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/melodic/rqt_robot_steering/0.5.9-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "300b980b8ef84b20db9d2af0348583d7"

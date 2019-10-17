@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=6;endline=6;md5=3dce4ba60d7e51e
 
 DEPENDS = "diagnostic-updater roscpp topic-tools"
 
-RDEPENDS_${PN} = "actionlib cob-light cob-msgs cob-script-server diagnostic-msgs ifstat ipmitool ntpdate paramiko python-mechanize python-psutil python-requests rospy rostopic sensor-msgs std-msgs sysstat"
+RDEPENDS_${PN} = "actionlib cob-light cob-msgs cob-script-server diagnostic-msgs ifstat ipmitool ntpdate paramiko python3-mechanize python3-psutil python3-requests rospy rostopic sensor-msgs std-msgs sysstat"
 
 SRC_URI = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_monitoring/0.6.14-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "da7b5920a17c6565869429c3738e927c"

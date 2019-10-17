@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=6;endline=6;md5=3dce4ba60d7e51e
 
 DEPENDS = "cob-msgs cob-phidgets dynamic-reconfigure roscpp std-msgs"
 
-RDEPENDS_${PN} = "python-tk rospy"
+RDEPENDS_${PN} = "python3-tk rospy"
 
 SRC_URI = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_voltage_control/0.7.0-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "b08463c08b0b0a6e4c12372e5ac6595c"

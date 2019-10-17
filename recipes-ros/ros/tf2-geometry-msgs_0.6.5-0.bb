@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-orocos-kdl geometry-msgs orocos-kdl tf2 tf2-ros"
+DEPENDS = "python3-orocos-kdl geometry-msgs orocos-kdl tf2 tf2-ros"
 
-RDEPENDS_${PN} = "python-orocos-kdl"
+RDEPENDS_${PN} = "python3-orocos-kdl"
 
 SRC_URI = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_geometry_msgs/0.6.5-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "3235e0cf77e3907079ca67a08989c60d"

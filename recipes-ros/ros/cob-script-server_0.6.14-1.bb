@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=6;endline=6;md5=3dce4ba60d7e51e
 
 DEPENDS = "message-generation actionlib actionlib-msgs rostest trajectory-msgs"
 
-RDEPENDS_${PN} = "message-runtime cob-actions cob-light cob-mimic cob-sound control-msgs geometry-msgs ipython move-base-msgs python-pygraphviz rospy std-msgs std-srvs tf"
+RDEPENDS_${PN} = "message-runtime cob-actions cob-light cob-mimic cob-sound control-msgs geometry-msgs ipython move-base-msgs python3-pygraphviz rospy std-msgs std-srvs tf"
 
 SRC_URI = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_script_server/0.6.14-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "45a69021f488e8848ec292b985c5fa81"

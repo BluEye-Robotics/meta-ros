@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=13;endline=13;md5=58e54c03ca7f821dd3967e2a2cd1596e"
 
-DEPENDS = "rospy python-pytest"
+DEPENDS = "rospy python3-pytest"
 
 RDEPENDS_${PN} = ""
 

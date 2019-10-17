@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=7;endline=7;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "diagnostic-msgs python-pyqt5 python-rospkg qt-gui rospy rqt-gui rqt-gui-py"
+DEPENDS = "diagnostic-msgs python3-pyqt5 python3-rospkg qt-gui rospy rqt-gui rqt-gui-py"
 
-RDEPENDS_${PN} = "diagnostic-msgs python-pyqt5 python-rospkg qt-gui rospy rqt-gui rqt-gui-py"
+RDEPENDS_${PN} = "diagnostic-msgs python3-pyqt5 python3-rospkg qt-gui rospy rqt-gui rqt-gui-py"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/melodic/rqt_runtime_monitor/0.5.7-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "8b485d040454a1a3877d4e6a091090aa"

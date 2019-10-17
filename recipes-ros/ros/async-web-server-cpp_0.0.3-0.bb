@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "openssl boost openssl boost python-websocket"
+DEPENDS = "openssl boost openssl boost python3-websocket"
 
-RDEPENDS_${PN} = "openssl boost python-websocket"
+RDEPENDS_${PN} = "openssl boost python3-websocket"
 
 SRC_URI = "https://github.com/gt-rail-release/async_web_server_cpp-release/archive/release/melodic/async_web_server_cpp/0.0.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "9a727454a9d206b7bdf2d58afa84f3c9"

@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "exotica-core pybind11-catkin moveit-msgs geometry-msgs shape-msgs python-matplotlib python-pyassimp"
+DEPENDS = "exotica-core pybind11-catkin moveit-msgs geometry-msgs shape-msgs python3-matplotlib python3-pyassimp"
 
 RDEPENDS_${PN} = ""
 

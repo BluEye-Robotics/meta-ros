@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "roslaunch actionlib-msgs diagnostic-msgs dynamic-reconfigure geometry-msgs mir-actions mir-msgs move-base-msgs nav-msgs python-websocket rosgraph-msgs rospy rospy-message-converter sensor-msgs std-msgs tf visualization-msgs"
+DEPENDS = "roslaunch actionlib-msgs diagnostic-msgs dynamic-reconfigure geometry-msgs mir-actions mir-msgs move-base-msgs nav-msgs python3-websocket rosgraph-msgs rospy rospy-message-converter sensor-msgs std-msgs tf visualization-msgs"
 
 RDEPENDS_${PN} = "mir-description robot-state-publisher"
 

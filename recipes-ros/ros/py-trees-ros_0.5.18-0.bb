@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=11;endline=11;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-setuptools"
+DEPENDS = "python3-setuptools"
 
-RDEPENDS_${PN} = "dynamic-reconfigure geometry-msgs move-base-msgs python-termcolor nav-msgs sensor-msgs actionlib actionlib-msgs py-trees py-trees-msgs python-rospkg rosbag rospy std-msgs unique-id uuid-msgs"
+RDEPENDS_${PN} = "dynamic-reconfigure geometry-msgs move-base-msgs python3-termcolor nav-msgs sensor-msgs actionlib actionlib-msgs py-trees py-trees-msgs python3-rospkg rosbag rospy std-msgs unique-id uuid-msgs"
 
 SRC_URI = "https://github.com/stonier/py_trees_ros-release/archive/release/melodic/py_trees_ros/0.5.18-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "0ff816bf9f8ba3bd2919e5a01ab28bf3"

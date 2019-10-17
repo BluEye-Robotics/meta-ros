@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=3dce4ba60d7e5
 
 DEPENDS = "cmake-modules gazebo-dev gazebo-msgs roslib roscpp tf std-srvs rosgraph-msgs dynamic-reconfigure std-msgs geometry-msgs libtinyxml"
 
-RDEPENDS_${PN} = "gazebo-dev python-argparse"
+RDEPENDS_${PN} = "gazebo-dev python3-argparse"
 
 SRC_URI = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros/2.8.4-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c680876f0f7d33bd5c0fa1571efd9170"

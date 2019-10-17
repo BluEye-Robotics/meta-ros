@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 
 DEPENDS = "python"
 
-RDEPENDS_${PN} = "geometry-msgs moveit-msgs moveit-ros-planning-interface python python-pyassimp rospy sensor-msgs shape-msgs tf"
+RDEPENDS_${PN} = "geometry-msgs moveit-msgs moveit-ros-planning-interface python python3-pyassimp rospy sensor-msgs shape-msgs tf"
 
 SRC_URI = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_commander/1.0.2-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "c818cae9dadc2da5d442fec0989ca296"

@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-catkin-pkg roslaunch rgbd-launch depth-image-proc image-proc nodelet openni2-camera rospy roswtf tf usbutils"
+DEPENDS = "python3-catkin-pkg roslaunch rgbd-launch depth-image-proc image-proc nodelet openni2-camera rospy roswtf tf usbutils"
 
 RDEPENDS_${PN} = "rgbd-launch depth-image-proc image-proc nodelet openni2-camera rospy roswtf tf usbutils"
 

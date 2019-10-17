@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=6;endline=6;md5=3dce4ba60d7e51e
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "cob-msgs cob-script-server python-gtk2 python-pygraphviz roslib rospy"
+RDEPENDS_${PN} = "cob-msgs cob-script-server python3-gtk2 python3-pygraphviz roslib rospy"
 
 SRC_URI = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.14-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "4f8721bd59aede2a623431c932158fc4"

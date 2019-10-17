@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=15;endline=15;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "python-pyyaml rosgraph"
+DEPENDS = "python3-pyyaml rosgraph"
 
-RDEPENDS_${PN} = "python-pyyaml rosgraph"
+RDEPENDS_${PN} = "python3-pyyaml rosgraph"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosparam/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "8bace558d7402eb49f0e513f8d9c0343"

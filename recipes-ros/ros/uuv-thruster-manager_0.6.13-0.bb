@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=15;endline=15;md5=82f0323c08605
 
 DEPENDS = "message-generation std-msgs"
 
-RDEPENDS_${PN} = "message-runtime tf rospy python-pyyaml uuv-gazebo-ros-plugins-msgs geometry-msgs uuv-assistants"
+RDEPENDS_${PN} = "message-runtime tf rospy python3-pyyaml uuv-gazebo-ros-plugins-msgs geometry-msgs uuv-assistants"
 
 SRC_URI = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.13-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "a545bf564216cf589258d7b69bd7a1bb"

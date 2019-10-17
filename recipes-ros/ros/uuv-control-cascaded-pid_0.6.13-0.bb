@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=15;endline=15;md5=82f0323c08605
 
 DEPENDS = "dynamic-reconfigure"
 
-RDEPENDS_${PN} = "geometry-msgs nav-msgs tf rospy python-numpy"
+RDEPENDS_${PN} = "geometry-msgs nav-msgs tf rospy python3-numpy"
 
 SRC_URI = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_cascaded_pid/0.6.13-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "11d16a6bfb52cd7aee3cf57a21d1d152"

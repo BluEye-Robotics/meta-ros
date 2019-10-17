@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "GPL"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=162b49cfbae9eadf37c9b89b2d2ac6be"
 
-DEPENDS = "python-catkin-pkg"
+DEPENDS = "python3-catkin-pkg"
 
 RDEPENDS_${PN} = ""
 

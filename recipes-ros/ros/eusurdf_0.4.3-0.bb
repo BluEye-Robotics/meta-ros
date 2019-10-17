@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "collada-urdf-jsk-patch gazebo-ros roseus rostest python-lxml collada-urdf-jsk-patch gazebo-ros python-lxml rostest"
+DEPENDS = "collada-urdf-jsk-patch gazebo-ros roseus rostest python3-lxml collada-urdf-jsk-patch gazebo-ros python3-lxml rostest"
 
-RDEPENDS_${PN} = "collada-urdf-jsk-patch gazebo-ros python-lxml rostest"
+RDEPENDS_${PN} = "collada-urdf-jsk-patch gazebo-ros python3-lxml rostest"
 
 SRC_URI = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eusurdf/0.4.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "77efbe38d6d8eeba25c311dca77e3b07"

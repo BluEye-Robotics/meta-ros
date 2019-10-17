@@ -194,6 +194,7 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
+            dep = dep.replace("python-", "python3-")
             dependencies.append(dep)
         return dependencies
 
@@ -207,6 +208,7 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
+            dep = dep.replace("python-", "python3-")
             dependencies.append(dep)
         return dependencies
 

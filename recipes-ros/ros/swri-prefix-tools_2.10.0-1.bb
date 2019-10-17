@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=12;endline=12;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-psutil"
+RDEPENDS_${PN} = "python3-psutil"
 
 SRC_URI = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_prefix_tools/2.10.0-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "24dfc87562deca8e9331e976fcab10f7"

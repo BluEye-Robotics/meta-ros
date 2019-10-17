@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rosgraph python-defusedxml"
+DEPENDS = "rosgraph python3-defusedxml"
 
-RDEPENDS_${PN} = "rosgraph python-defusedxml"
+RDEPENDS_${PN} = "rosgraph python3-defusedxml"
 
 SRC_URI = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosmaster/1.14.3-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "94abd85f0cbd0c5bce144d93e6d3b2dd"

@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=14;endline=14;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "doxygen epydoc genmsg python-catkin-pkg python-kitchen python-rospkg python-sphinx python-pyyaml"
+DEPENDS = "doxygen epydoc genmsg python3-catkin-pkg python3-kitchen python3-rospkg python3-sphinx python3-pyyaml"
 
-RDEPENDS_${PN} = "doxygen epydoc genmsg python-catkin-pkg python-kitchen python-rospkg python-sphinx python-pyyaml"
+RDEPENDS_${PN} = "doxygen epydoc genmsg python3-catkin-pkg python3-kitchen python3-rospkg python3-sphinx python3-pyyaml"
 
 SRC_URI = "https://github.com/ros-gbp/rosdoc_lite-release/archive/release/melodic/rosdoc_lite/0.2.9-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "8dd1f2cae8577da7ffe827bcefe446b9"

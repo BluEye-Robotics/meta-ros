@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "message-generation python-catkin-pkg roslint cmake-modules diagnostic-msgs diagnostic-updater libeigen eigen-conversions geographic-msgs geometry-msgs message-filters nav-msgs nodelet roscpp sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros xmlrpcpp yaml-cpp"
+DEPENDS = "message-generation python3-catkin-pkg roslint cmake-modules diagnostic-msgs diagnostic-updater libeigen eigen-conversions geographic-msgs geometry-msgs message-filters nav-msgs nodelet roscpp sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros xmlrpcpp yaml-cpp"
 
 RDEPENDS_${PN} = "message-runtime"
 

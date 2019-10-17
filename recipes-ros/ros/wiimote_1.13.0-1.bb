@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "GPL"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=4;endline=4;md5=162b49cfbae9eadf37c9b89b2d2ac6be"
 
-DEPENDS = "cwiid-dev roslint genmsg geometry-msgs sensor-msgs python-cwiid python-numpy roslib rospy roscpp std-msgs std-srvs"
+DEPENDS = "cwiid-dev roslint genmsg geometry-msgs sensor-msgs python3-cwiid python3-numpy roslib rospy roscpp std-msgs std-srvs"
 
 RDEPENDS_${PN} = "cwiid"
 

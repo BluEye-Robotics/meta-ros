@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "control-msgs industrial-msgs industrial-robot-client python-rospkg rospy sensor-msgs trajectory-msgs"
+RDEPENDS_${PN} = "control-msgs industrial-msgs industrial-robot-client python3-rospkg rospy sensor-msgs trajectory-msgs"
 
 SRC_URI = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_robot_simulator/0.7.1-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "a725252748ef1533edb8a2ebe3e78d53"

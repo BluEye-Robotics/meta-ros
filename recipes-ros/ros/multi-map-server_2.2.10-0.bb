@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=7;endline=7;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "map-server nav-msgs rosconsole roscpp rospy tf python-imaging python-pyyaml yaml-cpp libsdl-image jsk-tools rosmake map-server nav-msgs rosconsole roscpp rospy tf yaml-cpp libsdl-image"
+DEPENDS = "map-server nav-msgs rosconsole roscpp rospy tf python3-imaging python3-pyyaml yaml-cpp libsdl-image jsk-tools rosmake map-server nav-msgs rosconsole roscpp rospy tf yaml-cpp libsdl-image"
 
 RDEPENDS_${PN} = "map-server nav-msgs rosconsole roscpp rospy tf yaml-cpp libsdl-image"
 

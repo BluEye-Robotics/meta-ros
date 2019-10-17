@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "audio-capture audio-common-msgs julius julius-voxforge nkf python-lxml python-rospkg rospy sound-play speech-recognition-msgs std-srvs"
+DEPENDS = "audio-capture audio-common-msgs julius julius-voxforge nkf python3-lxml python3-rospkg rospy sound-play speech-recognition-msgs std-srvs"
 
-RDEPENDS_${PN} = "audio-capture audio-common-msgs julius julius-voxforge nkf python-lxml python-rospkg rospy sound-play speech-recognition-msgs std-srvs"
+RDEPENDS_${PN} = "audio-capture audio-common-msgs julius julius-voxforge nkf python3-lxml python3-rospkg rospy sound-play speech-recognition-msgs std-srvs"
 
 SRC_URI = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/julius_ros/2.1.13-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "b9df91f6a893269f5a0cd2d5ca52b89b"

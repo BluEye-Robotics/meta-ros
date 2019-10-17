@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rospy geometry-msgs python-numpy"
+DEPENDS = "rospy geometry-msgs python3-numpy"
 
-RDEPENDS_${PN} = "rospy geometry-msgs python-numpy"
+RDEPENDS_${PN} = "rospy geometry-msgs python3-numpy"
 
 SRC_URI = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/mouse_teleop/0.3.0-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "eb6f85045b8e99320b6af07e15fdf0cf"

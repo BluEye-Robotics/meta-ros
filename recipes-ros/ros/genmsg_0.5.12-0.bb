@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=9;endline=9;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "catkin python-empy"
+DEPENDS = "catkin python3-empy"
 
-RDEPENDS_${PN} = "catkin python-empy"
+RDEPENDS_${PN} = "catkin python3-empy"
 
 SRC_URI = "https://github.com/ros-gbp/genmsg-release/archive/release/melodic/genmsg/0.5.12-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "8c555c4c9feca08c3e0f2b53d1db1b90"

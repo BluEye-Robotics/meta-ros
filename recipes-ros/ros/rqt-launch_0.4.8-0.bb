@@ -4,9 +4,9 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "rqt-py-common python-pyqt5 roslaunch rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
+DEPENDS = "rqt-py-common python3-pyqt5 roslaunch rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
 
-RDEPENDS_${PN} = "python-pyqt5 roslaunch rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
+RDEPENDS_${PN} = "python3-pyqt5 roslaunch rospy rqt-console rqt-gui rqt-gui-py rqt-py-common"
 
 SRC_URI = "https://github.com/ros-gbp/rqt_launch-release/archive/release/melodic/rqt_launch/0.4.8-0.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "a3165be8884c5ccac21136c1c441891e"
