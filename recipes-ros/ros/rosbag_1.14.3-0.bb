@@ -4,7 +4,7 @@ SECTION = "devel"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-DEPENDS = "boost cpp-common python3-imaging rosbag-storage rosconsole roscpp roscpp-serialization std-srvs topic-tools xmlrpcpp boost genmsg genpy python3-pycrypto python3-gnupg python3-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
+DEPENDS = "boost cpp-common python3-pillow rosbag-storage rosconsole roscpp roscpp-serialization std-srvs topic-tools xmlrpcpp boost genmsg genpy python3-pycrypto python3-gnupg python3-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
 
 RDEPENDS_${PN} = "boost genmsg genpy python3-pycrypto python3-gnupg python3-rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp"
 

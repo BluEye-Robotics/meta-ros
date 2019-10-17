@@ -122,6 +122,7 @@ DEP_RENAME = {
     "libssl-dev": "openssl",
     "libgpgme-dev": "gpgme",
     "python-crypto": "python-pycrypto",
+    "python-imaging": "python-pillow",
 }
 
 
