@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=14;endline=14;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-rospkg python3-rospkg roslib"
+RDEPENDS_${PN} = "python-rospkg roslib"
 
 SRC_URI = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roscreate/1.14.7-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "5b3291e2dd257cfa03aae08a7f366520"

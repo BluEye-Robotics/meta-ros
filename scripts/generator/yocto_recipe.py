@@ -87,7 +87,6 @@ DEP_RENAME = {
     "libconsole-bridge-dev": "console-bridge",
     "python-wxtools": "",
     "python-yaml": "python-pyyaml",
-    "python3-yaml": "python-pyyaml",
     "google-mock": "gmock",
     "eigen": "libeigen",
     "roslisp": "",
@@ -195,7 +194,8 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
-            dependencies.append(dep)
+            if not "python3" in dep:
+                dependencies.append(dep)
         return dependencies
 
     def getRuntimeDependencies(self):
@@ -208,7 +208,8 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
-            dependencies.append(dep)
+            if not "python3" in dep:
+                dependencies.append(dep)
         return dependencies
 
     def getLicenseLineNumber(self):
