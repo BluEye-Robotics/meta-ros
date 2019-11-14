@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=13;endline=13;md5=d566ef916e9de
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "catkin python-rospkg python3-rospkg"
+RDEPENDS_${PN} = "catkin python-rospkg"
 
 SRC_URI = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.7-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "bd91514dd481358bfcfbae3e4b27c07a"

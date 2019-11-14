@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "python-pyqt5 python-rospkg python3-rospkg"
+RDEPENDS_${PN} = "python-pyqt5 python-rospkg"
 
 SRC_URI = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_py_common/0.3.15-1.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "20ef89251299f9d2e15422a59a3d3c00"

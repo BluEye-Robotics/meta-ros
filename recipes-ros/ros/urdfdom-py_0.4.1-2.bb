@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=7;endline=7;md5=d566ef916e9dedc
 
 DEPENDS = ""
 
-RDEPENDS_${PN} = "rospy python-lxml python3-lxml python-pyyaml python3-pyyaml"
+RDEPENDS_${PN} = "rospy python-lxml python-pyyaml"
 
 SRC_URI = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/melodic/urdfdom_py/0.4.1-2.tar.gz;downloadfilename=${ROS_BPN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "49f74d86f53f65c557fc4d164aaae6ce"

@@ -195,7 +195,8 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
-            dependencies.append(dep)
+            if not "python3" in dep:
+                dependencies.append(dep)
         return dependencies
 
     def getRuntimeDependencies(self):
@@ -208,7 +209,8 @@ class XmlParser:
             if dep in BLACKLIST:
                 print_err("Depencency blacklisted for %s: %s" % (self.name, dep))
                 raise Exception("dep blacklisted")
-            dependencies.append(dep)
+            if not "python3" in dep:
+                dependencies.append(dep)
         return dependencies
 
     def getLicenseLineNumber(self):
