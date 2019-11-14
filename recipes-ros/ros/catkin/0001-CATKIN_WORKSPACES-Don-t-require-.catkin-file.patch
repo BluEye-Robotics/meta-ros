@@ -1,32 +1,31 @@
-From 1b1d46cbd8231bdaa484c5c647dd4beda07215f5 Mon Sep 17 00:00:00 2001
-From: Stefan Herbrechtsmeier <stefan@herbrechtsmeier.net>
-Date: Wed, 13 Mar 2013 11:49:17 +0100
-Subject: [PATCH 1/6] CATKIN_WORKSPACES: Don't require .catkin file
+From f8ced9b2abb7c3274ebe6c708443e25fdf0b94f4 Mon Sep 17 00:00:00 2001
+From: Johannes Schrimpf <johannes.schrimpf@blueye.no>
+Date: Thu, 14 Nov 2019 16:27:02 +0100
+Subject: [PATCH] CATKIN_WORKSPACES-Don-t-require-.catkin-file
 
-Upstream-Status: Inappropriate [only for our setup]
-
-Signed-off-by: Stefan Herbrechtsmeier <stefan@herbrechtsmeier.net>
 ---
- cmake/all.cmake                            | 8 +++-----
- cmake/list_insert_in_workspace_order.cmake | 9 ++++-----
- 2 files changed, 7 insertions(+), 10 deletions(-)
+ cmake/all.cmake                            | 10 ++++------
+ cmake/list_insert_in_workspace_order.cmake |  9 ++++-----
+ 2 files changed, 8 insertions(+), 11 deletions(-)
 
 diff --git a/cmake/all.cmake b/cmake/all.cmake
-index 6910906..95b82e0 100644
+index 7768f96..5efef2a 100644
 --- a/cmake/all.cmake
 +++ b/cmake/all.cmake
-@@ -53,11 +53,9 @@ set(CMAKE_PREFIX_PATH_AS_IS ${CMAKE_PREFIX_PATH})
+@@ -57,12 +57,10 @@ set(CMAKE_PREFIX_PATH_AS_IS ${CMAKE_PREFIX_PATH})
  # list of unique catkin workspaces based on CMAKE_PREFIX_PATH
  set(CATKIN_WORKSPACES "")
  foreach(path ${CMAKE_PREFIX_PATH})
 -  if(EXISTS "${path}/.catkin")
--    list(FIND CATKIN_WORKSPACES ${path} _index)
+-    file(TO_CMAKE_PATH "${path}" cmake_path)
+-    list(FIND CATKIN_WORKSPACES ${cmake_path} _index)
 -    if(_index EQUAL -1)
--      list(APPEND CATKIN_WORKSPACES ${path})
+-      list(APPEND CATKIN_WORKSPACES ${cmake_path})
 -    endif()
-+  list(FIND CATKIN_WORKSPACES ${path} _index)
++  file(TO_CMAKE_PATH "${path}" cmake_path)
++  list(FIND CATKIN_WORKSPACES ${cmake_path} _index)
 +  if(_index EQUAL -1)
-+    list(APPEND CATKIN_WORKSPACES ${path})
++    list(APPEND CATKIN_WORKSPACES ${cmake_path})
    endif()
  endforeach()
  if(CATKIN_WORKSPACES)
@@ -52,5 +51,5 @@ index 7f8c574..9b6dbb3 100644
  
  debug_message(10 "CATKIN_ORDERED_SPACES ${CATKIN_ORDERED_SPACES}")
 -- 
-2.7.4
+2.21.0 (Apple Git-122)
 
