@@ -8,3 +8,7 @@ inherit ${ROS_DISTRO_TYPE}_distro
 
 # HACK until "python-qt-binding" builds
 ROS_EXEC_DEPENDS_remove = "python-qt-binding"
+
+do_install_append_class-target() {
+    sed -i 's@#!${STAGING_BINDIR_NATIVE}/python3-native/python3@#!/usr/bin/env python3@g' ${D}${ros_bindir}/* | true
+}
