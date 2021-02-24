@@ -5,30 +5,40 @@
 inherit ros_distro_noetic
 inherit ros_superflore_generated
 
-DESCRIPTION = "Nodelet Core Metapackage"
+DESCRIPTION = "This package contains common nodelet tools such as a mux, demux and throttle."
 AUTHOR = "Michael Carroll <michael@openrobotics.org>"
-ROS_AUTHOR = "Tully Foote"
-HOMEPAGE = "http://www.ros.org/wiki/nodelet_core"
+ROS_AUTHOR = "Radu Bogdan Rusu"
+HOMEPAGE = "http://ros.org/wiki/nodelet_topic_tools"
 SECTION = "devel"
 LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=d566ef916e9dedc494f5f793a6690ba5"
+LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
 ROS_CN = "nodelet_core"
-ROS_BPN = "nodelet_core"
+ROS_BPN = "nodelet_topic_tools"
 
-ROS_BUILD_DEPENDS = ""
+ROS_BUILD_DEPENDS = " \
+    boost \
+    dynamic-reconfigure \
+"
 
 ROS_BUILDTOOL_DEPENDS = " \
     catkin-native \
 "
 
-ROS_EXPORT_DEPENDS = ""
+ROS_EXPORT_DEPENDS = " \
+    boost \
+    dynamic-reconfigure \
+    message-filters \
+    nodelet \
+    pluginlib \
+    roscpp \
+"
 
 ROS_BUILDTOOL_EXPORT_DEPENDS = ""
 
 ROS_EXEC_DEPENDS = " \
-    nodelet \
-    nodelet-topic-tools \
+    boost \
+    dynamic-reconfigure \
 "
 
 # Currently informational only -- see http://www.ros.org/reps/rep-0149.html#dependency-tags.
@@ -41,10 +51,10 @@ DEPENDS += "${ROS_EXPORT_DEPENDS} ${ROS_BUILDTOOL_EXPORT_DEPENDS}"
 
 RDEPENDS_${PN} += "${ROS_EXEC_DEPENDS}"
 
-# matches with: https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_core/1.10.0-1.tar.gz
-ROS_BRANCH ?= "branch=release/noetic/nodelet_core"
+# matches with: https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_topic_tools/1.10.1-1.tar.gz
+ROS_BRANCH ?= "branch=release/noetic/nodelet_topic_tools"
 SRC_URI = "git://github.com/ros-gbp/nodelet_core-release;${ROS_BRANCH};protocol=https"
-SRCREV = "69103db510d129d841e141d9b9f77145e5e37de7"
+SRCREV = "1c2b3f48c1bf6ab87e0fccc10a1131ff0dad2e1a"
 S = "${WORKDIR}/git"
 
 ROS_BUILD_TYPE = "catkin"

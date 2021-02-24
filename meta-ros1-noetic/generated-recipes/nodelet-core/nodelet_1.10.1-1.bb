@@ -66,10 +66,10 @@ DEPENDS += "${ROS_EXPORT_DEPENDS} ${ROS_BUILDTOOL_EXPORT_DEPENDS}"
 
 RDEPENDS_${PN} += "${ROS_EXEC_DEPENDS}"
 
-# matches with: https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet/1.10.0-1.tar.gz
+# matches with: https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet/1.10.1-1.tar.gz
 ROS_BRANCH ?= "branch=release/noetic/nodelet"
 SRC_URI = "git://github.com/ros-gbp/nodelet_core-release;${ROS_BRANCH};protocol=https"
-SRCREV = "be838c98ee70d923a56b6a55b6322ffebca43e92"
+SRCREV = "242ec6e34df8614b9598a50f59f55de48e567549"
 S = "${WORKDIR}/git"
 
 ROS_BUILD_TYPE = "catkin"
