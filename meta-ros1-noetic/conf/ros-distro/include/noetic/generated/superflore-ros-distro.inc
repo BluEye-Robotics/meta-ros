@@ -1820,9 +1820,9 @@ ROS_SUPERFLORE_GENERATED_RECIPE_BASENAMES_WITH_COMPONENT = " \
                            nerian-stereo/nerian-stereo_3.8.1-1 \
                                nmea-msgs/nmea-msgs_1.1.0-1 \
                       nmea-navsat-driver/nmea-navsat-driver_0.6.0-1 \
-                            nodelet-core/nodelet_1.10.0-1 \
-                            nodelet-core/nodelet-core_1.10.0-1 \
-                            nodelet-core/nodelet-topic-tools_1.10.0-1 \
+                            nodelet-core/nodelet_1.10.1-1 \
+                            nodelet-core/nodelet-core_1.10.1-1 \
+                            nodelet-core/nodelet-topic-tools_1.10.1-1 \
                         common-tutorials/nodelet-tutorial-math_0.2.0-1 \
                nonpersistent-voxel-layer/nonpersistent-voxel-layer_1.2.3-2 \
                      novatel-oem7-driver/novatel-oem7-driver_1.1.0-1 \
